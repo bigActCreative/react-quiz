@@ -1,8 +1,8 @@
-import Illustration from "../Illustration";
-
-import classes from "../../styles/Signup.module.css";
+import { Link } from "react-router-dom";
+import classes from "../../styles/Login.module.css";
 import Button from "../Button";
 import Form from "../Form";
+import Illustration from "../Illustration";
 import TextInput from "../TextInput";
 
 export default function Login() {
@@ -11,7 +11,7 @@ export default function Login() {
       <h1>Login to your account</h1>
       <div className="column">
         <Illustration />
-        <Form className={classes.signup}>
+        <Form className={classes.login}>
           <TextInput
             type="email"
             placeholder="Enter Email"
@@ -23,7 +23,7 @@ export default function Login() {
             <span>Submit now</span>
           </Button>
           <div className="info">
-            Dont have an account? <a href="login.html">Signup</a> instead.
+            Dont have an account? <Link to="/signup">Signup</Link> instead.
           </div>
         </Form>
       </div>
